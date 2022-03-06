@@ -1,0 +1,36 @@
+{% extends "base.html" %}
+{% block content %}
+    <h1>Continuous Integration/Continuous Deployment</h1>
+    <h2>Setting Up the Project: Github Actions</h2>
+        <p>Github actions allows you to create workflows to build and test every pull request to your repository or deploy merged pull requests to production.
+            Github Action workflows are triggered when an event occurs in your repository.
+            A workflow contains one or more jobs that will run in a sequential order on its own virtual machine runner. Each job has one or more steps for an action.
+            </p>
+        <div>
+        </div>
+        <p>The project required me to create two different workflows. I created a production workflow (prod.workflow.yml) and a development workflow (development.workflow.yml).
+             I also added secrets in my Github repository for the project for DOCKER_USERNAME, DOCKER_PASSWORD, and HEROKU_API_KEY so that the files would show up on each respective account for Docker and Heroku.
+            The development workflow is triggered on a pull request from the main branch.
+            A pytest will run to check all the files before deploying it to the development application on Heroku.
+            The production workflow is triggered on a push request. It will run tests in the project folder,
+            build the container in Docker and push it to the repository in Docker hub, and then deploy it onto the Heroku production application. </p>
+        <div>
+        </div>
+        <p>By creating new branches for each step of the project and committing the changes made each time, the workflows get triggered and the project is able to be seen on the repositories.</p>
+
+    <div> </div>
+    <h2>Reviewing Code with Development Server</h2>
+        <p> By creating a workflow for the development, one will be able to see if there are any errors in the code
+        very early in the process. If the workflow does not run , then one can see at which step in the workflow
+        that the errors occurred on Github after committing the changes and pushing to the repository. </p>
+
+    <h2>Deploying Master to Production Server</h2>
+        <p> Deploying the master branch to the production server happens after the push or merge after pull request.
+        The production workflow gets triggered and this will update the Heroku prod application.</p>
+    <div> </div>
+
+    <h2>Deploying an Image to Dockerhub When Master is Updated</h2>
+        <p>Based on how the production workflow is set up, the image only gets deployed to Dockerhub after the
+        push or merge after pull request. There is a job specified on the workflow to build and push the image
+        onto my Dockerhub repository.</p>
+{% endblock %}
