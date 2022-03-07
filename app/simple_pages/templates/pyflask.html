@@ -37,10 +37,25 @@
     <h2>Links</h2>
        <ul>
            <li>Github: https://github.com/caitlind26/another-flask </li>
-           <li> Flask: https://cd-prod1.herokuapp.com/ </li>
+           <li>Flask: https://cd-prod1.herokuapp.com/ </li>
        </ul>
     <h2>Flask Blueprint Documentation</h2>
+        <p> Code: from flask import Blueprint, render_template, abort </p>
+        <p> The above line of code exemplifies how to use Flask blueprints when creating applications.
+        Blueprints are useful in simplifying larger applications by providing template filters and other
+        utilities. Blueprints basically record operations to execute when registered on the application.
+        </p>
     <h2>Flask testing with Pytest</h2>
+        <p>Flask allows for testing an application with pytest. The tests are located in the "tests" folder.
+        The tests are functions that begin with "tests_" and then one specifies what they want tested.
+        In the "conftest.py" file of the tests folder, fixtures for the application, test client, and CLI runner
+        are there because this was created using an application factory. Pytest fixtures let you write pieces of code that are
+        reusable across tests. The test client makes requests to the application without running a live server.
+        Flask's client extends from Werkzeug's client. The client method takes arguments for creating the request.
+        To make the request, call the method with the path that routes to the test ("def test_request_ex(client)") and define the response variable
+            "response = client.get("/'page'"). Use the "assert b'<'condition'> in response.data". From here, a TestResponse is used to
+        observe the response data. Running pytest in the terminal will let you know if there are any errors.
+        </p>
     <h2>Purpose of Files in Directory</h2>
         <ul>
             <li>Root directory: root of project</li>
