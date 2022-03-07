@@ -7,7 +7,7 @@ body {
     margin-left: 40px;
 }
 
-.header {
+header {
      background-color: #D8AECA;
 }
 
@@ -27,7 +27,7 @@ footer {
 }
 
 #bootstrap-overrides .carousel {
-    height:500px;
+    height:800px;
 }
 
 
