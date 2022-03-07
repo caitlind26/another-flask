@@ -1,6 +1,6 @@
 {% extends "base.html" %}
 {% block content %}
-    Python
+    <h1>Python</h1>
 
     <h2>Testing with pytest</h2>
         <p> Testing with pytest: This project highlights the importance of writing unit tests for Python code. Testing your code after
@@ -12,32 +12,34 @@
     <h2>Creating and Testing the Simple Pages</h2>
         <p>First, I created a new branch from the main to begin working on the simple pages. I created a new directory in the app folder
         called "simple_pages" and created another folder within this called "templates". The "templates" folder stores the code for each
-        page on the application written in HTML/CSS.</p>
+        page on the application written in HTML/CSS. I labelled each page accordingly and used template inheritance with blocks to create the content
+        for each page. The "base.html" file in the templates folder of the app directory was edited to match my page names.</p>
         <div>
         </div>
 
-        <p>To test the simple pages, I created a new file in the "tests" directory called "simple_pages_test.py". It is important to name
-        the file with "_test.py" so that pytest recognizes this file. For each page of my website, I defined a variable and used the assert()
-        function to test a particular condition. The assert() function related to the title of each page. I ran pytest in the Python terminal
+        <p>To test the simple pages, I defined a variable and used the assert() function to test a particular condition for each page of my application.
+            The assert() function related to the title of each page. I ran pytest in the Python terminal
         to test that each webpage was working. The fact that all the tests passed means that the code is good.</p>
 
     <h2>Links</h2>
        <ul>
-
+           <li>Github: https://github.com/caitlind26/another-flask </li>
+           <li> Flask: https://cd-prod1.herokuapp.com/ </li>
        </ul>
-Link to project on Github link to flask:
-Flask blueprint documentation:
-Flask testing with Pytest:
-Explain purpose of every file in the directory
-Project Root Folder: Root of project
-docker-compose.yml: orchestration file
-.coveragerc: configuration file
-.dockerignore: used to ignore files and folders when you try to build a docker image
-.gitignore: specifies intentionally untracked files the Git should ignore .pylintrc: specifies coding standards for each module
-.Dockerfile: file used to create an image to run in a container that runs the file
-Heroku.yml: workflow file for Heroku to build the image from Docker and release it to the web
-Pytest.ini: this file instructs all files that have tests in the name to be treated as unit tests
-Readme.md: contains information for the user about the code/software
-Requirements.txt : lists of all the dependencies for a project
-setup.py:
+    <h2>Flask Blueprint Documentation</h2>
+    <h2>Flask testing with Pytest</h2>
+    <h2>Purpose of Files in Directory</h2>
+        <ul>
+            <li>.coveragerc: configuration file </li>
+            <li>.dockerignore: used to ignore files and folders when you try to build a docker image</li>
+            <li>.gitignore: specifies intentionally untracked files the Git should ignore .pylintrc: specifies coding standards for each module</li>
+            <li>.Dockerfile: file used to create an image to run in a container that runs the file</li>
+            <li>Heroku.yml: workflow file for Heroku to build the image from Docker and release it to the web</li>
+            <li>Pytest.ini: this file instructs all files that have tests in the name to be treated as unit tests</li>
+            <li>Readme.md: contains information for the user about the code/software</li>
+            <li>Requirements.txt : lists of all the dependencies for a project</li>
+            <li>setup.py: allows for correct software installation</li>
+        </ul>
+
+
 {% endblock %}
