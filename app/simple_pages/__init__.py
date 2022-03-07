@@ -7,11 +7,6 @@ simple_pages = Blueprint('simple_pages', __name__,
 
 @simple_pages.route('/', defaults={'page': 'index'})
 @simple_pages.route('/<page>')
-@simple_pages.route('index')
-@simple_pages.route('cicd')
-@simple_pages.route('docker')
-@simple_pages.route('pyflask')
-@simple_pages.route('git')
 
 def show(page):
     try:
