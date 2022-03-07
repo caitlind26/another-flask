@@ -1,10 +1,9 @@
 body {
-font-size: 200%;
+    font-size: 200%;
+    background-color: rgb(255, 235, 235);
 }
 
 .tab {
-    margin-left: 40px; }
-
-.carousel-item {
-
+    margin-left: 40px;
 }
+
