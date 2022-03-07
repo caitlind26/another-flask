@@ -1,0 +1,48 @@
+{% extends "base.html" %}
+{% block content %}
+    <h1>Docker</h1>
+     <h2>Containers & Images</h2>
+        <p> A container is a unit of software that includes code and dependencies that the application needs to run on any computer.
+            An image is an executable package of software that includes code, runtime, system tools, system libraries, and settings
+            Container images become containers when the application is run </p>
+
+    <blockquote> Link to Project on Docker Hub: https://hub.docker.com/r/caitlind26/cd394-flask </blockquote>
+
+    <h2>Docker Commands</h2>
+    <ul>
+        <li>
+            docker compose up -- build: builds docker image from Dockerfile
+        </li>
+        <li>
+            docker --version: shows Docker version information
+        </li>
+        <li>
+            docker run: creates a container layer over an image
+        </li>
+        <li>
+            docker stop: stops running a container
+        </li>
+        <li>
+            docker ps: displays list of running containers
+        </li>
+        <li>
+            docker commit: creates a new image from the container's changes
+        </li>
+        <li>
+            docker push: pushes an image/repo to a registry
+        </li>
+        <li>
+            docker pull: pulls an image/repo from a registry
+        </li>
+        <li>
+            docker rm: removes containers
+        </li>
+    </ul>
+
+
+    <h2>Starting the Project</h2>
+        <p>I began by creating a repository for the Flask application. The repository is called
+        "caitlind26/cd394-flask"</p>
+        <div>
+        </div>
+{% endblock %}
