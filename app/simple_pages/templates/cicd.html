@@ -32,5 +32,5 @@
     <h2>Deploying an Image to Dockerhub When Master is Updated</h2>
         <p>Based on how the production workflow is set up, the image only gets deployed to Dockerhub after the
         push or merge after pull request. There is a job specified on the workflow to build and push the image
-        onto my Dockerhub repository.</p>
+        onto my Dockerhub repository. Using the command "docker push <'repository name'>:tag" updates the image on Dockerhub.</p>
 {% endblock %}
