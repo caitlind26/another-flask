@@ -1,6 +1,7 @@
 {% extends "base.html" %}
 {% block content %}
     <h1>Continuous Integration/Continuous Deployment</h1>
+    <div></div>
     <h2>Setting Up the Project: Github Actions</h2>
         <p>Github actions allows you to create workflows to build and test every pull request to your repository or deploy merged pull requests to production.
             Github Action workflows are triggered when an event occurs in your repository.
@@ -21,12 +22,12 @@
     <div> </div>
     <h2>Reviewing Code with Development Server</h2>
         <p> By creating a workflow for the development, one will be able to see if there are any errors in the code
-        very early in the process. If the workflow does not run , then one can see at which step in the workflow
+        very early in the process before creating the final product. If the workflow does not run , then one can see at which step in the workflow
         that the errors occurred on Github after committing the changes and pushing to the repository. </p>
 
     <h2>Deploying Master to Production Server</h2>
-        <p> Deploying the master branch to the production server happens after the push or merge after pull request.
-        The production workflow gets triggered and this will update the Heroku prod application.</p>
+        <p> Deploying the master branch to the production server happens after the push or merge after pull request. The branch will get
+            merged into the master branch and the production workflow gets triggered.This will update the Heroku production application.</p>
     <div> </div>
 
     <h2>Deploying an Image to Dockerhub When Master is Updated</h2>
