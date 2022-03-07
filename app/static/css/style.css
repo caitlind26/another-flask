@@ -36,3 +36,16 @@ header {
 footer {
     display:none;
 }
+
+.carousel-item {
+    position: relative;
+    display: none;
+    float: left;
+    width: 100%;
+    margin-right: -100%;
+}
+
+.carousel {
+    height:800px;
+    width:1200px;
+}
