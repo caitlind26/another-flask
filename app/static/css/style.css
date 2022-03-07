@@ -42,3 +42,7 @@ header {
 .carousel {
     position:relative;
 }
+
+footer {
+    display:none;
+}
