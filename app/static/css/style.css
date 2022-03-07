@@ -1,14 +1,17 @@
 body {
     font-size: 200%;
-    background-color: rgb(255, 235, 235);
+    background-color: #D8AECA;
 }
 
 .tab {
     margin-left: 40px;
 }
 
+.header {
+     background-color: #D8AECA;
+}
+
 header {
-    background-color: rgb(255, 235, 235);
     font-family: Garamond, serif;
 }
 
@@ -17,8 +20,12 @@ header {
     position:relative;
 }
 
-.nav-item {
+#nav li {
     text-align:right;
     position: relative;
 }
 
+.carousel-inner {
+    position:relative;
+    width:100%
+}
