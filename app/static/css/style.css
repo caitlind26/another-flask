@@ -7,3 +7,18 @@ body {
     margin-left: 40px;
 }
 
+header {
+    background-color: rgb(255, 235, 235);
+    font-family: Garamond, serif;
+}
+
+.navbar-brand {
+    text-align:left;
+    position:relative;
+}
+
+.nav-item {
+    text-align:right;
+    position: relative;
+}
+
