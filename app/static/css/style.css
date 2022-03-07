@@ -33,28 +33,6 @@ header {
     position: relative;
 }
 
-
-.carousel-inner {
-    position:relative;
-    width:100%;
-    height:20%;
-}
-.carousel-item  {
-    width:100%;
-    height: 100%;
-}
-
-.carousel {
-    position:relative;
-    height:600px;
-    width:80%;
-    margin:0 auto;
-}
-.carousel-slide {
-    width: 100%;
-    height:100%;
-}
-
 footer {
     display:none;
 }
