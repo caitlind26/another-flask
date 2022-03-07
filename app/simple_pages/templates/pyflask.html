@@ -1,43 +1,88 @@
 {% extends "base.html" %}
 {% block content %}
-    Python
-
+    <h1>Python</h1>
+    <div></div>
     <h2>Testing with pytest</h2>
-        <p> Testing with pytest: This project highlights the importance of writing unit tests for Python code. Testing your code after
+        <p> This project highlights the importance of writing unit tests for Python code. Testing your code after
     creating it and while building the project allows you to make sure that you are going in the right direction.
     You can use the assert keyword when writing these tests for each function.
     Running pytest will show you if the tests you made failed (F) or had unexpected exceptions (E) or if it passed (dot .).</p>
-    <blockquote> Examples from code: Python -m pip install pytest </blockquote>
+    <blockquote>
+        <h3>Examples from my code</h3>
+            <p>In the tests folder, there is a file named "simple_pages_test.py" and this contains the tests for each webpage and menu link.
+                Below is the code for testing the cicd page. This variable tests to see if the phrase "Continuous Integration/Continuous Deployment" is
+                on the page. If it is, running pytest will pass. If it is not there, then the pytest will fail. <br>
+                <p class = "tab">
+                def test_request_cicd(client): <br>
+                         """This tests the cicd page"""<br>
+                        response = client.get("/cicd")<br>
+                        assert response.status_code == 200<br>
+                        assert b"Continuous Integration/Continuous Deployment" in response.data<br>
+                </p>
 
+    </blockquote>
+<div></div>
     <h2>Creating and Testing the Simple Pages</h2>
         <p>First, I created a new branch from the main to begin working on the simple pages. I created a new directory in the app folder
         called "simple_pages" and created another folder within this called "templates". The "templates" folder stores the code for each
-        page on the application written in HTML/CSS.</p>
+        page on the application written in HTML/CSS. I labelled each page accordingly and used template inheritance with blocks to create the content
+        for each page. The "base.html" file in the templates folder of the app directory was edited to match my page names.</p>
         <div>
         </div>
 
-        <p>To test the simple pages, I created a new file in the "tests" directory called "simple_pages_test.py". It is important to name
-        the file with "_test.py" so that pytest recognizes this file. For each page of my website, I defined a variable and used the assert()
-        function to test a particular condition. The assert() function related to the title of each page. I ran pytest in the Python terminal
+        <p>To test the simple pages, I defined a variable and used the assert() function to test a particular condition for each page of my application.
+            The assert() function related to the title of each page. I ran pytest in the Python terminal
         to test that each webpage was working. The fact that all the tests passed means that the code is good.</p>
-
+<div></div>
     <h2>Links</h2>
        <ul>
-
+           <li><a href="https://github.com/caitlind26/another-flask">Github Repository</a></li>
+           <li><a href="https://flask.palletsprojects.com/en/2.0.x/">Flask</a></li>
        </ul>
-Link to project on Github link to flask:
-Flask blueprint documentation:
-Flask testing with Pytest:
-Explain purpose of every file in the directory
-Project Root Folder: Root of project
-docker-compose.yml: orchestration file
-.coveragerc: configuration file
-.dockerignore: used to ignore files and folders when you try to build a docker image
-.gitignore: specifies intentionally untracked files the Git should ignore .pylintrc: specifies coding standards for each module
-.Dockerfile: file used to create an image to run in a container that runs the file
-Heroku.yml: workflow file for Heroku to build the image from Docker and release it to the web
-Pytest.ini: this file instructs all files that have tests in the name to be treated as unit tests
-Readme.md: contains information for the user about the code/software
-Requirements.txt : lists of all the dependencies for a project
-setup.py:
+    <div></div>
+    <h2>Flask Blueprint Documentation</h2>
+        <h3><a href="https://jinja.palletsprojects.com/en/3.0.x/">Jinga Documentation</a></h3>
+        <h3><a href="https://werkzeug.palletsprojects.com/en/2.0.x/">Werkzeug Documentation</a> </h3>
+        <p>
+        Blueprints are useful in simplifying larger applications by providing template filters and other
+        utilities. Blueprints basically record operations to execute when registered on the application.
+        </p>
+    <div></div>
+    <h2><a href="https://flask.palletsprojects.com/en/2.0.x/testing/">Flask testing with Pytest</a></h2>
+        <p>Flask allows for testing an application with pytest. The tests are located in the "tests" folder.
+        The tests are functions that begin with "tests_" and then one specifies what they want tested.
+        In the "conftest.py" file of the tests folder, fixtures for the application, test client, and CLI runner
+        are there because this was created using an application factory. Pytest fixtures let you write pieces of code that are
+        reusable across tests. The test client makes requests to the application without running a live server.
+        Flask's client extends from Werkzeug's client. The client method takes arguments for creating the request.
+        To make the request, call the method with the path that routes to the test ("def test_request_ex(client)") and define the response variable
+            "response = client.get("/'page'"). Use the "assert b'<'condition'> in response.data". From here, a TestResponse is used to
+        observe the response data. Running pytest in the terminal will let you know if there are any errors.
+        </p>
+    <div></div>
+    <h2>Purpose of Files in Directory</h2>
+    <div></div>
+        <ul>
+            <li>Root directory: root of project</li>
+                <ul>
+                    <li>.github: contains workflows for development and deployment </li>
+                    <li>app:contains templates for creating the app</li>
+                    <li>calculator: directory for calculator project</li>
+                    <li>tests: contains the files for testing the application</li>
+                </ul>
+        </ul>
+        <ul>
+            <li>.coveragerc: configuration file </li>
+            <li>.dockerignore: used to ignore files and folders when you try to build a docker image</li>
+            <li>.gitignore: specifies intentionally untracked files the Git should ignore
+            <li>.pylintrc: specifies coding standards for each module</li>
+            <li>.Dockerfile: file used to create an image to run in a container that runs the file</li>
+            <li>heroku.yml: workflow file for Heroku to build the image from Docker and release it to the web</li>
+            <li>pytest.ini: this file instructs all files that have tests in the name to be treated as unit tests</li>
+            <li>readme.md: contains information for the user about the code/software</li>
+            <li>requirements.txt : lists of all the dependencies for a project</li>
+            <li>setup.py: allows for correct software installation</li>
+        </ul>
+
+
 {% endblock %}
