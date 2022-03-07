@@ -16,21 +16,6 @@ header {
     text-align:right;
 }
 
-.navbar ul li {
-    float:right;
-    text-align:right;
-    position:relative;
-}
-.navbar .navbar-collapse {
-  flex-basis: auto;
-    float:right;
-}
-
-@media screen and (max-width:991px){
-.navbar .navbar-collapse {
-  flex-basis: 100%;
-}
-}
 
 #nav li {
     text-align:right;
