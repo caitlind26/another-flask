@@ -43,6 +43,10 @@ header {
 .carousel {
     position:relative;
 }
+.carousel-slide {
+    width: 100%;
+    height:20%;
+}
 
 footer {
     display:none;
