@@ -16,12 +16,20 @@ header {
     text-align:right;
 }
 
-.navbar ul {
+.navbar ul li {
+    float:right;
     text-align:right;
     position:relative;
 }
-#bootstrap-overrides #nav{
+.navbar .navbar-collapse {
+  flex-basis: auto;
     float:right;
+}
+
+@media screen and (max-width:991px){
+.navbar .navbar-collapse {
+  flex-basis: 100%;
+}
 }
 
 #nav li {
@@ -36,8 +44,6 @@ footer {
 #bootstrap-overrides .carousel {
     height:500px;
 }
-#bootstrap-overrides .navbar-nav {
-    float:right;
-}
+
 
 
