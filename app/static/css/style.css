@@ -20,12 +20,8 @@ header {
     text-align:right;
     position:relative;
 }
-.navbar-collapse collapse show{
+#bootstrap-overrides .navbar-collapse collapse show{
     float:right;
-}
-
-.topnav-right {
-  float: right;
 }
 
 #nav li {
@@ -40,5 +36,5 @@ footer {
 #bootstrap-overrides .carousel {
     height:800px;
 }
-
+#bootstrap-overrides
 
