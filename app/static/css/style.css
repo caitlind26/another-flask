@@ -13,6 +13,7 @@ body {
 
 header {
     font-family: Garamond, serif;
+    text-align:right;
 }
 
 .navbar-brand {
