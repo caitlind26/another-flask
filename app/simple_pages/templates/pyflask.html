@@ -3,11 +3,24 @@
     <h1>Python</h1>
 
     <h2>Testing with pytest</h2>
-        <p> Testing with pytest: This project highlights the importance of writing unit tests for Python code. Testing your code after
+        <p> This project highlights the importance of writing unit tests for Python code. Testing your code after
     creating it and while building the project allows you to make sure that you are going in the right direction.
     You can use the assert keyword when writing these tests for each function.
     Running pytest will show you if the tests you made failed (F) or had unexpected exceptions (E) or if it passed (dot .).</p>
-    <blockquote> Examples from code: Python -m pip install pytest </blockquote>
+    <blockquote>
+        <h3>Examples from my code</h3>
+            <p>In the tests folder, there is a file named "simple_pages_test.py" and this contains the tests for each webpage and menu link.
+                Below is the code for testing the cicd page. This variable tests to see if the phrase "Continuous Integration/Continuous Deployment" is
+                on the page. If it is, running pytest will pass. If it is not there, then the pytest will fail. <br>
+                <p class = "tab">
+                def test_request_cicd(client): <br>
+                         """This tests the cicd page"""<br>
+                        response = client.get("/cicd")<br>
+                        assert response.status_code == 200<br>
+                        assert b"Continuous Integration/Continuous Deployment" in response.data<br>
+                </p>
+
+    </blockquote>
 
     <h2>Creating and Testing the Simple Pages</h2>
         <p>First, I created a new branch from the main to begin working on the simple pages. I created a new directory in the app folder
