@@ -13,7 +13,7 @@ def test_request_index(client):
     """This tests the index page"""
     response = client.get("/index")
     assert response.status_code == 200
-    assert b"Caitlin D'Souza Project 1" in response.data
+    assert b" " in response.data
 
 def test_request_cicd(client):
     """This tests the cicd page"""
