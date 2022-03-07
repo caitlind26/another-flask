@@ -16,7 +16,7 @@ header {
     text-align:right;
 }
 
-.navbar-nav {
+.navbar ul {
     text-align:right;
     position:relative;
 }
