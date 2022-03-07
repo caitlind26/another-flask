@@ -1,7 +1,7 @@
 {% extends "base.html" %}
 {% block content %}
     <h1>Python</h1>
-
+    <div></div>
     <h2>Testing with pytest</h2>
         <p> This project highlights the importance of writing unit tests for Python code. Testing your code after
     creating it and while building the project allows you to make sure that you are going in the right direction.
@@ -21,7 +21,7 @@
                 </p>
 
     </blockquote>
-
+<div></div>
     <h2>Creating and Testing the Simple Pages</h2>
         <p>First, I created a new branch from the main to begin working on the simple pages. I created a new directory in the app folder
         called "simple_pages" and created another folder within this called "templates". The "templates" folder stores the code for each
@@ -33,12 +33,13 @@
         <p>To test the simple pages, I defined a variable and used the assert() function to test a particular condition for each page of my application.
             The assert() function related to the title of each page. I ran pytest in the Python terminal
         to test that each webpage was working. The fact that all the tests passed means that the code is good.</p>
-
+<div></div>
     <h2>Links</h2>
        <ul>
            <li><a href="https://github.com/caitlind26/another-flask">Github Repository</a></li>
            <li><a href="https://flask.palletsprojects.com/en/2.0.x/">Flask</a></li>
        </ul>
+    <div></div>
     <h2>Flask Blueprint Documentation</h2>
         <h3><a href="https://jinja.palletsprojects.com/en/3.0.x/">Jinga Documentation</a></h3>
         <h3><a href="https://werkzeug.palletsprojects.com/en/2.0.x/">Werkzeug Documentation</a> </h3>
@@ -46,6 +47,7 @@
         Blueprints are useful in simplifying larger applications by providing template filters and other
         utilities. Blueprints basically record operations to execute when registered on the application.
         </p>
+    <div></div>
     <h2><a href="https://flask.palletsprojects.com/en/2.0.x/testing/">Flask testing with Pytest</a></h2>
         <p>Flask allows for testing an application with pytest. The tests are located in the "tests" folder.
         The tests are functions that begin with "tests_" and then one specifies what they want tested.
@@ -57,7 +59,9 @@
             "response = client.get("/'page'"). Use the "assert b'<'condition'> in response.data". From here, a TestResponse is used to
         observe the response data. Running pytest in the terminal will let you know if there are any errors.
         </p>
+    <div></div>
     <h2>Purpose of Files in Directory</h2>
+    <div></div>
         <ul>
             <li>Root directory: root of project</li>
                 <ul>
@@ -70,12 +74,13 @@
         <ul>
             <li>.coveragerc: configuration file </li>
             <li>.dockerignore: used to ignore files and folders when you try to build a docker image</li>
-            <li>.gitignore: specifies intentionally untracked files the Git should ignore .pylintrc: specifies coding standards for each module</li>
+            <li>.gitignore: specifies intentionally untracked files the Git should ignore
+            <li>.pylintrc: specifies coding standards for each module</li>
             <li>.Dockerfile: file used to create an image to run in a container that runs the file</li>
-            <li>Heroku.yml: workflow file for Heroku to build the image from Docker and release it to the web</li>
-            <li>Pytest.ini: this file instructs all files that have tests in the name to be treated as unit tests</li>
-            <li>Readme.md: contains information for the user about the code/software</li>
-            <li>Requirements.txt : lists of all the dependencies for a project</li>
+            <li>heroku.yml: workflow file for Heroku to build the image from Docker and release it to the web</li>
+            <li>pytest.ini: this file instructs all files that have tests in the name to be treated as unit tests</li>
+            <li>readme.md: contains information for the user about the code/software</li>
+            <li>requirements.txt : lists of all the dependencies for a project</li>
             <li>setup.py: allows for correct software installation</li>
         </ul>
 
