@@ -1,4 +1,4 @@
-# Project Setup
+# Project 1 Caitlin D'Souza
 
 [![Production Workflow](https://github.com/caitlind26/another-flask/actions/workflows/prod.yml/badge.svg)](https://github.com/caitlind26/another-flask/actions/workflows/prod.yml)
 
