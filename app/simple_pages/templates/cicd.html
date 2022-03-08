@@ -2,14 +2,18 @@
 {% block content %}
     <h1>Continuous Integration/Continuous Deployment</h1>
     <div></div>
+    <div>
+        <img src="https://quintagroup.com/blog/blog-images/ci_cd-process-1.jpg" alt="git branch" class="center" style="width:350px;height:250px;">
+
+    </div>
     <h2>Setting Up the Project: Github Actions</h2>
-        <p>Github actions allows you to create workflows to build and test every pull request to your repository or deploy merged pull requests to production.
-            Github Action workflows are triggered when an event occurs in your repository.
-            A workflow contains one or more jobs that will run in a sequential order on its own virtual machine runner. Each job has one or more steps for an action.
+        <p>Github actions allows you to create workflows to build and test your code. The workflows are defined by a YAML file and can
+            be triggered by specific activity in the repository, such as a pull request, opens an issue, or pushes a commit. Workflows contain one or more
+            jobs that will run in a sequential order on its own virtual machine runner. Each job has one or more steps for an action.
             </p>
         <div>
         </div>
-        <p>The project required me to create two different workflows. I created a production workflow (prod.workflow.yml) and a development workflow (development.workflow.yml).
+        <p>The project required me to create two different workflows. I created a production workflow (prod.yml) and a development workflow (dev.yml).
              I also added secrets in my Github repository for the project for DOCKER_USERNAME, DOCKER_PASSWORD, and HEROKU_API_KEY so that the files would show up on each respective account for Docker and Heroku.
             The development workflow is triggered on a pull request from the main branch.
             A pytest will run to check all the files before deploying it to the development application on Heroku.
@@ -21,13 +25,17 @@
 
     <div> </div>
     <h2>Reviewing Code with Development Server</h2>
-        <p> By creating a workflow for the development, one will be able to see if there are any errors in the code
+        <p> Using a development server facilitates the process of creating an application by dividing the initial and final steps in the process.
+            By creating a workflow for the development, one will be able to see if there are any errors in the code
         very early in the process before creating the final product. If the workflow does not run , then one can see at which step in the workflow
         that the errors occurred on Github after committing the changes and pushing to the repository. </p>
 
     <h2>Deploying Master to Production Server</h2>
-        <p> Deploying the master branch to the production server happens after the push or merge after pull request. The branch will get
-            merged into the master branch and the production workflow gets triggered.This will update the Heroku production application.</p>
+        <p> Deploying the master branch to the production server happens after the push or merge after pull request. This can only occur when the
+            development workflow runs, meaning that the tests ran correctly and that it got deployed onto the Heroku development app.
+            A button will appear to "Merge Pull Request" after this workflow runs. The commit will get
+            merged into the master branch and the production workflow gets triggered. Clicking on the button will trigger the production workflow where
+            there are jobs to run more tests, build the container on Docker, and then deploy it onto Heroku production server. This will update the Heroku production application.</p>
     <div> </div>
 
     <h2>Deploying an Image to Dockerhub When Master is Updated</h2>
