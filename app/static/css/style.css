@@ -27,6 +27,22 @@ header {
     text-align:right;
     position: relative;
 }
+#nav li:hover {background:#003f20;}
+#nav ul {
+    position:absolute;
+    padding:0;
+    left:0;
+    display:none; /* hides sublists */
+}
+#nav li:hover ul ul {display:none;}
+#nav li:hover ul {display:block;}
+#nav li li:hover ul {
+    display:block;
+    position:relative;
+    margin-left:200px;
+    margin-top:-35px;
+    z-index:999999;
+}
 
 footer {
     display:none;
