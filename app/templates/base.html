@@ -44,12 +44,15 @@
                                     <a class="nav-link" href="{{ url_for('simple_pages.show', page="cicd")}}">CI/CD</a>
                                 </li>
                                 <li class="nav-item">Project 2
-                                    <ul>
-                                        <li><a class="nav-link" href="{{ url_for('simple_pages.show', page="oop")}}">OOP</a></li>
-                                        <li><a class="nav-link" href="{{ url_for('simple_pages.show', page="aaa")}}">AAA</a></li>
-                                        <li><a class="nav-link" href="{{ url_for('simple_pages.show', page="principles")}}">Principles of OOP</a></li>
-                                        <li><a class="nav-link" href="{{ url_for('simple_pages.show', page="solid")}}">SOLID</a></li>
-                                    </ul>
+                                    <div class="subnav">
+                                        <button class="subnavbtn">Project 2 <i class="fa fa-caret-down"></i> </button>
+                                        <div class="subnav-content">
+                                            <a class="nav-link" href="{{ url_for('simple_pages.show', page="oop")}}">OOP</a>
+                                            <a class="nav-link" href="{{ url_for('simple_pages.show', page="aaa")}}">AAA</a>
+                                            <a class="nav-link" href="{{ url_for('simple_pages.show', page="principles")}}">Principles of OOP</a>
+                                            <a class="nav-link" href="{{ url_for('simple_pages.show', page="solid")}}">SOLID</a>
+                                        </div>
+                                    </div>
                                 </li>
                             </ul>
                     </div>

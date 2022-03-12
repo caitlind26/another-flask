@@ -27,21 +27,54 @@ header {
     text-align:right;
     position: relative;
 }
-#nav li:hover {background:#003f20;}
-#nav ul {
-    position:absolute;
-    padding:0;
-    left:0;
-    display:none; /* hides sublists */
+.subnav {
+  float: left;
+  overflow: hidden;
 }
-#nav li:hover ul ul {display:none;}
-#nav li:hover ul {display:block;}
-#nav li li:hover ul {
-    display:block;
-    position:relative;
-    margin-left:200px;
-    margin-top:-35px;
-    z-index:999999;
+
+/* Subnav button */
+.subnav .subnavbtn {
+  font-size: 16px;
+  border: none;
+  outline: none;
+  color: white;
+  padding: 14px 16px;
+  background-color: inherit;
+  font-family: inherit;
+  margin: 0;
+}
+
+/* Add a red background color to navigation links on hover */
+.navbar a:hover, .subnav:hover .subnavbtn {
+  background-color: pink;
+}
+
+/* Style the subnav content - positioned absolute */
+.subnav-content {
+  display: none;
+  position: absolute;
+  left: 0;
+  background-color: pink;
+  width: 100%;
+  z-index: 1;
+}
+
+/* Style the subnav links */
+.subnav-content a {
+  float: left;
+  color: white;
+  text-decoration: none;
+}
+
+/* Add a grey background color on hover */
+.subnav-content a:hover {
+  background-color: #eee;
+  color: black;
+}
+
+/* When you move the mouse over the subnav container, open the subnav content */
+.subnav:hover .subnav-content {
+  display: block;
 }
 
 footer {
