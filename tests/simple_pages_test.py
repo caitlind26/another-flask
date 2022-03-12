@@ -34,3 +34,27 @@ def test_request_pyflask(client):
     assert response.status_code == 200
     assert b"Python" in response.data
 
+def test_request_principles(client):
+    """This tests the principles page"""
+    response = client.get("/principles")
+    assert response.status_code == 200
+    assert b"principles" in response.data
+
+def test_request_aaa(client):
+    """This tests the AAA testing page"""
+    response = client.get("/aaa")
+    assert response.status_code == 200
+    assert b"AAA testing" in response.data
+
+def test_request_oop(client):
+    """This tests the object oriented principles page"""
+    response = client.get("/oop")
+    assert response.status_code == 200
+    assert b"Object Oriented Principles" in response.data
+
+def test_request_solid(client):
+    """This tests the SOLID principles page"""
+    response = client.get("/solid")
+    assert response.status_code == 200
+    assert b"SOLID principles" in response.data
+
