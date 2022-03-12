@@ -43,16 +43,14 @@
                                 <li class="nav-item">
                                     <a class="nav-link" href="{{ url_for('simple_pages.show', page="cicd")}}">CI/CD</a>
                                 </li>
-                                <li class="nav-item">Project 2
-                                    <div class="subnav">
-                                        <button class="subnavbtn">Project 2 <i class="fa fa-caret-down"></i> </button>
-                                        <div class="subnav-content">
-                                            <a class="nav-link" href="{{ url_for('simple_pages.show', page="oop")}}">OOP</a>
-                                            <a class="nav-link" href="{{ url_for('simple_pages.show', page="aaa")}}">AAA</a>
-                                            <a class="nav-link" href="{{ url_for('simple_pages.show', page="principles")}}">Principles of OOP</a>
-                                            <a class="nav-link" href="{{ url_for('simple_pages.show', page="solid")}}">SOLID</a>
-                                        </div>
-                                    </div>
+                                 <li class="dropdown-submenu">
+                                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"> <span class="nav-label">Project 2</span><span class="caret"></span></a>
+                                    <ul class="dropdown-menu">
+                                        <li><a class="nav-link" href="{{ url_for('simple_pages.show', page="oop")}}">OOP</a></li>
+                                        <li><a class="nav-link" href="{{ url_for('simple_pages.show', page="principles")}}">Principles</a></li>
+                                        <li><a class="nav-link" href="{{ url_for('simple_pages.show', page="aaa")}}">AAA</a></li>
+                                        <li><a class="nav-link" href="{{ url_for('simple_pages.show', page="solid")}}">SOLID</a></li>
+                                    </ul>
                                 </li>
                             </ul>
                     </div>
