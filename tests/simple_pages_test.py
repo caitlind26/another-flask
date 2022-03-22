@@ -44,7 +44,7 @@ def test_request_aaa(client):
     """This tests the AAA testing page"""
     response = client.get("/aaa")
     assert response.status_code == 200
-    assert b"AAA testing" in response.data
+    assert b"AAA Testing" in response.data
 
 def test_request_oop(client):
     """This tests the object oriented principles page"""
