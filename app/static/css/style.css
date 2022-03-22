@@ -22,11 +22,22 @@ header {
   margin-right: auto;
   width: 50%;
 }
+#nav li:hover {background: darkslategrey;}
 
 #nav li {
     text-align:center;
     position: relative;
 }
+
+li.nav-item:hover ul.a {
+    display: block;
+}
+
+li.submenu {
+    display:none;
+}
+
+
 
 footer {
     display:none;
