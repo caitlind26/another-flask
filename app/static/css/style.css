@@ -29,7 +29,7 @@ header {
     position: relative;
 }
 
-#bootstrap-overrides.nav-item:hover ul.a {
+/*#bootstrap-overrides.nav-item:hover ul.a {
     display: block;
 }
 #bootstrap-overrides .a {
@@ -38,6 +38,8 @@ header {
 #bootstrap-overrides ul.a:hover {
     display:contents;
 }
+
+ */
 p {
     text-indent: 40px;
 }
