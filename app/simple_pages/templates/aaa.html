@@ -1,35 +1,60 @@
 {% extends "base.html" %}
 {% block content %}
     <h1>AAA Testing</h1>
-    <img src="https://miro.medium.com/max/1200/1*_MiurxVJ3baRaV6s7r4vwA.png" alt="unit testing" class="center" style="width:350px;height:250px;"
+    <br>
 
-    <p>Create a tutorial that demonstrates AAA testing with Python and explain why testing is important.</p>
+    <img src="https://miro.medium.com/max/1200/1*_MiurxVJ3baRaV6s7r4vwA.png" alt="unit testing" class="center" style="width:350px;height:250px;">
 
-    <div> </div>
+    <br>
 
     <h2>The Importance of Testing</h2>
-        <div></div>
+        <br>
         There is no point in making code for functions if it does not have functionality. Testing the functionality of a code is critical in
         ensuring that the function does what it is intended to do. Creating simple unit tests to check each function is a good way of making
         sure that the code works for a certain test case. If the test case passes the pytest, then other applications of that code will work as well.
 
-        <div></div>
+        <br>
+
         <h3>Testing with pytest</h3>
+        <br>
             <p>Running pytest in the terminal will allow you to see if the unit tests all pass. If the unit test has errors, then the pytest will
             tell you the exact line of the error and where the error is. </p>
 
     <h2>What is AAA Testing?</h2>
-        <div></div>
-        <p>AAA testing focuses on testing specific behaviors in your code to make sure that it is functional. These tests are simple
+        <br>
+        <p>AAA testing is a simple pattern to structure unit tests. It focuses on testing specific behaviors in your code to make sure that it is functional. These tests are simple
         and ensures that the function does what it is intended to do.</p>
-        <p>
-            <b>AAA:</b> simple test that focuses on specific behaviors; aids in writing good functional tests
+             <br>
             <ol>
-                <li>Arrange: sets up the test case by putting in targets</li>
-                <li>Act: fulfill target behavior</li>
-                <li>Assert: expected outcomes, should elicit some sort of response</li>
+                <li><b>Arrange:</b> This step requires you to sets up the test case by putting in targets.
+                            If the test requires an inputs, preparations, or logins, this is where you should specify that information. </li>
+                <li><b>Act:</b> This step covers the main item of testing. The action should be focused on the target behavior of the function.</li>
+                <li><b>Assert:</b> This step specifies the expected outcome to ensure that the proper result is obtained.
+                            The <i>Assert</i> step verifies that the desired response is elicited.</li>
             </ol>
-        </p>
+     <br>
+    <h3>AAA Tutorial</h3>
+        <br>
+        <p>Say suppose I wanted to create a test for dividing two numbers and getting the quotient.</p>
+             <br>
+            <p style="margin-left:200px; margin-right:200px;">
+             <br>
 
-
+            def test_division_of_nums():
+                <br>
+            #Arrange
+                value_1 = 6
+                value_2 = 3
+                <br>
+                #Act
+                quotient = divide(value_1,value_2)
+                <br>
+            #Assert
+            assert quotient == 2
+            </p>
+        <ol>
+            <li>Arrange: This step specifies the values for the operation. </li>
+            <li>Act: This step calls the division function and stores the answer in a variable called "quotient". </li>
+            <li>Assert: This step verifies that the result of the division operation is correct. </li>
+        </ol>
 {% endblock %}

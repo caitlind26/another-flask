@@ -29,12 +29,13 @@ class Multiplication:
         """ This is the add method"""
         return value_1 * value_2
 
+
 class Division:
     """ This is the division class"""
 
     @staticmethod
-    def divide(value_1,value_2):
+    def divide(value_1, value_2):
         """This is the divide method"""
-       # if value_2 == 0:
+        # if value_2 == 0:
         #    print("error: division by zero not allowed")
         return value_1 / value_2

@@ -50,11 +50,11 @@ def test_request_oop(client):
     """This tests the object oriented principles page"""
     response = client.get("/oop")
     assert response.status_code == 200
-    assert b"Object Oriented Principles" in response.data
+    assert b"Object-Oriented Principles" in response.data
 
 def test_request_solid(client):
     """This tests the SOLID principles page"""
     response = client.get("/solid")
     assert response.status_code == 200
-    assert b"SOLID principles" in response.data
+    assert b"SOLID Principles" in response.data
 

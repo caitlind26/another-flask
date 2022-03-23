@@ -29,15 +29,18 @@ header {
     position: relative;
 }
 
-li.nav-item:hover ul.a {
+#bootstrap-overrides.nav-item:hover ul.a {
     display: block;
 }
-
-li.submenu {
+#bootstrap-overrides .a {
     display:none;
 }
-
-
+#bootstrap-overrides ul.a:hover {
+    display:contents;
+}
+p {
+    text-indent: 40px;
+}
 
 footer {
     display:none;
