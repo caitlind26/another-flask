@@ -1,4 +1,49 @@
 {% extends "base.html" %}
 {% block content %}
-    SOLID Principles
+    <h1>SOLID Principles in the Calculator Program</h1>
+    <br>
+    <p>
+        The SOLID principles are designed to ensure that code is not repetitious by breaking things down into independent pieces. This allows one to easily make
+        sure that each piece does the job that it is intended to do. The calculator demonstrates SOLID and implements the design principles associated so that the
+        code is straightforward and easy to understand.
+    </p>
+    <br>
+    <ul>
+        <li><b>Single-Responsibility:</b> This principle states the one function can have only one job. The calculator code is written so that each function has only
+            a few lines of code to accomplish that specific task. The functions are named appropriately so that whoever is reading the code can understand each of their purposes.
+        </li>
+        <li><b>Open-Close Principle:</b>This principle states that a function should be open for extension yet closed for modification so to achieve this, inheritance is used.
+            The classes defined in the code are closed, meaning that it is the parent. However, if someone wants to modify the class, they can create a subclass using inheritance
+            and adding the new features. The open-close principle is evident in the calculations\__init__.py file. This file contains the code for each operation. Each operation class
+            is inheriting the Calculation class properties that were specified previously and the modifications are defining the operation for each operation type. This demonstrates the
+            open-close principle because the Calculation class is not getting changed and the classes that inherit the Calculation class are the modifications.
+            <br>
+            In addition, the Decorator Pattern is also used in the calculator program because it attaches additional responsibilities to an object dynamically and allows for extending functionality
+        to the subclasses. The decorators used in the program include  </li>
+        <li><b>Liskov-Substitution Principle:</b>This principle states that the objects of a superclass can be replaced with the objects of its subclasses without breaking the application.
+            The calculator demonstrates this principle because the operation classes Addition, Subtraction, and Multiplication are extending the Calculation class and only that class. The
+            calculation is the abstract base class and the classes created from that are the subclasses. The operations classes are used in the operations and calculations __init__.py files.
+            Replacing the contents of the classes for the operations with that of the calculations will not break the code so therefore the principle is followed.</li>
+        <li><b>Interface Segregation Principle:</b> This principle states that the clients should not be forced to depend on interfaces they do not use. The calculator program demonstrates
+        this principle considering the fact that the functions reflect the single-responsibility principle. Since each function has one job, there is no need to write in additional code to specify
+        other things. When creating classes, the calculator does not call upon other objects that do not directly relate to the class at hand. By not implementing other interfaces into the code where it is
+        not necessary, the program is demonstrating this principle.</li>
+        <li><b>Dependency Inversion Principle:</b> This principle states that high level modules should not depend on low-level modules, and both should depend on abstractions. The details should
+        depend on abstractions, not vice versa. In other words, this means that the high-level module should depend on the abstraction and the low-level depends on the same abstractions. The program
+        demonstrates this principle through the Factory Method. The Factory Method states that no class should derive from a concrete class and no method can override an implemented method of its base classes.
+        The factory method returns an instance of the class that is in reference and this demonstrates the single-responsibility principle because its job is to create a class instance only.
+            <br>
+            For example, it would be incorrect in the code to write calculation = Calculator.calculator. This is a violation of the single object rule so the factory method must be used here instead.
+            Therefore, the code will look like this: calculation = Addition.create(tuple_list). The create method must be used to produce the calculation since there is only one place in the program that instantiates the calculator objects.
+            <br>
+            Another example of the factory method is the line of code in the calculations\__init__.py file: <br>
+                def create(cls, tuple_list:tuple): <br> return cls(tuple_list) <br>
+            This function represents the factory method by creating an instance for the tuple list so that it can be used in abstractions later on.
+
+        </li>
+    </ul>
+
+    <h5>Source: http://web.science.mq.edu.au/~mattr/courses/object_oriented_development_practices/5/notes.html </h5>
+
+
 {% endblock %}

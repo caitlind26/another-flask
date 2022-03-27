@@ -38,7 +38,7 @@ def test_request_principles(client):
     """This tests the principles page"""
     response = client.get("/principles")
     assert response.status_code == 200
-    assert b"principles" in response.data
+    assert b"Calculator Programming Demonstrations of OOP" in response.data
 
 def test_request_aaa(client):
     """This tests the AAA testing page"""
@@ -56,5 +56,5 @@ def test_request_solid(client):
     """This tests the SOLID principles page"""
     response = client.get("/solid")
     assert response.status_code == 200
-    assert b"SOLID Principles" in response.data
+    assert b"SOLID Principles in the Calculator Program" in response.data
 

@@ -1,4 +1,38 @@
 {% extends "base.html" %}
 {% block content %}
-    principles
+    <h1>Calculator Programming Demonstrations of OOP</h1>
+   <br>
+    <ul>
+        <li><b>Encapsulation:</b> An example of encapsulation in the calculator code is in the line: <br>
+        Calculation = Addition.create(tuple_list)
+        <br>
+        return calculation.get_result()
+        <br>
+            <p>This represents encapsulation because the addition instance is stored in the calculation and encapsulates the data and functionality
+                to work on the tuple list inputs to perform the operation.
+                Doing this for the other operations allows for the calculator code to get the results of the calculations. </p>
+        </li>
+         <br>
+        <li><b>Inheritance:</b> An example of inheritance in the calculator code is:
+        <br>
+        class Addition(Calculation):
+        <br>
+            <p>This means that the new addition class is inheriting properties from the parent class Calculator. This eliminates repetition in the code and makes the program more efficient.
+                By having the Addition class inherit the Calculation class properties, the Addition class will only have to specify the code for the specific operation.</p></li>
+        <li><b>Polymorphism:</b></li> An example of a polymorphism in the calculator program is in the calculations directory in the __init__.py file:
+        <br>
+            def get_result(self):
+        <br>
+            This function is used in every class operation, but it works in a different way depending on the operation. Because this one function can do many things, it represents a polymorphism.
+            The function states the object will get the results from that specific operation for the class. The object itself knows its operation type so depending on what type of object it is,
+            it will perform the appropriate operation and get the result. The function looks different depending on the class even though it is the same function name.
+        <br>
+        <li><b>Abstraction:</b> An example of an abstraction in the calculator code is in the calculator_test.py file in the tests folder. <br>
+            The function def test_calculator_add_method(): uses the Addition class but does not actually perform the operation.
+            <br>
+            Instead, the function uses the "assert" statement to create an object and return the results based on the tuple list of values for addition.
+            The function has to call one method that will call another method. Therefore, this demonstrates the chain of the process in doing the operations, getting the result, and testing the function.
+            Every function has a singular responsibility so this is how the calculator demonstrates Abstraction.</li>
+    </ul>
+
 {% endblock %}
