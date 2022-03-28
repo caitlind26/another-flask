@@ -4,11 +4,10 @@ def test_request_main_menu_links(client):
     """This makes the index page"""
     response = client.get("/")
     assert response.status_code == 200
-    assert b'<a class="nav-link" href="/cicd">CI/CD</a>' in response.data
-    assert b'<a class="nav-link" href="/docker">Docker</a>' in response.data
-    assert b'<a class="nav-link" href="/git">Git</a>' in response.data
-    assert b'<a class="nav-link" href="/pyflask">Python/Flask</a>' in response.data
-
+    assert b'<a class="nav-link" href="/principles">Calculator Principles of OOP</a>' in response.data
+    assert b'<a class="nav-link" href="/aaa">AAA Testing</a>' in response.data
+    assert b'<a class="nav-link" href="/oop">OOP</a>' in response.data
+    assert b'<a class="nav-link" href="/solid">SOLID</a>' in response.data
 
 def test_request_cicd(client):
     """This tests the cicd page"""
@@ -33,4 +32,28 @@ def test_request_pyflask(client):
     response = client.get("/pyflask")
     assert response.status_code == 200
     assert b"Python" in response.data
+
+def test_request_principles(client):
+    """This tests the principles page"""
+    response = client.get("/principles")
+    assert response.status_code == 200
+    assert b"Calculator Programming Demonstrations of OOP" in response.data
+
+def test_request_aaa(client):
+    """This tests the AAA testing page"""
+    response = client.get("/aaa")
+    assert response.status_code == 200
+    assert b"AAA Testing" in response.data
+
+def test_request_oop(client):
+    """This tests the object oriented principles page"""
+    response = client.get("/oop")
+    assert response.status_code == 200
+    assert b"Object-Oriented Principles" in response.data
+
+def test_request_solid(client):
+    """This tests the SOLID principles page"""
+    response = client.get("/solid")
+    assert response.status_code == 200
+    assert b"SOLID Principles in the Calculator Program" in response.data
 

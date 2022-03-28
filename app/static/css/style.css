@@ -22,10 +22,26 @@ header {
   margin-right: auto;
   width: 50%;
 }
+#nav li:hover {background: darkslategrey;}
 
 #nav li {
-    text-align:right;
+    text-align:center;
     position: relative;
+}
+
+/*#bootstrap-overrides.nav-item:hover ul.a {
+    display: block;
+}
+#bootstrap-overrides .a {
+    display:none;
+}
+#bootstrap-overrides ul.a:hover {
+    display:contents;
+}
+
+ */
+p {
+    text-indent: 40px;
 }
 
 footer {

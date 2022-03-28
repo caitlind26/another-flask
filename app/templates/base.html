@@ -21,7 +21,7 @@
             <!-- As a link -->
             <nav class="navbar navbar-expand-lg navbar-light bg-light">
                 <div class="container">
-                    <a class="navbar-brand" href="/">Project 1</a>
+                    <a class="navbar-brand" href="/">Project 2</a>
                     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
                             aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                         <span class="navbar-toggler-icon"></span>
@@ -32,16 +32,19 @@
                                     <a class="nav-link active" aria-current="page" href="{{ url_for('simple_pages.show', page="index")}}">Home</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link" href="{{ url_for('simple_pages.show', page="git")}}">Git</a>
+                                    <a class="nav-link active" aria-current="page" href="{{ url_for('simple_pages.show', page="project1")}}">Project 1</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link" href="{{ url_for('simple_pages.show', page="docker")}}">Docker</a>
+                                    <a class="nav-link" href="{{ url_for('simple_pages.show', page="aaa")}}">AAA Testing</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link" href="{{ url_for('simple_pages.show', page="pyflask")}}">Python/Flask</a>
+                                    <a class="nav-link" href="{{ url_for('simple_pages.show', page="oop")}}">OOP</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link" href="{{ url_for('simple_pages.show', page="cicd")}}">CI/CD</a>
+                                    <a class="nav-link" href="{{ url_for('simple_pages.show', page="principles")}}">Calculator Principles of OOP</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="{{ url_for('simple_pages.show', page="solid")}}">SOLID</a>
                                 </li>
                             </ul>
                     </div>

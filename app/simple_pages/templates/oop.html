@@ -1,0 +1,76 @@
+{% extends "base.html" %}
+{% block content %}
+    <h1>Object-Oriented Principles</h1>
+        <ul>
+            <li><b>Object-Oriented Programming:</b> strives to create reusable code with objects and classes</li>
+            <li><b>Instantiation:</b>creates an object instance from a class</li>
+            <li><b>Object:</b> an entity that has a state and behavior</li>
+            <li><b>Class:</b> collection of objects that has its own attributes and behaviors</li>
+            <li><b>Namespace:</b> files and folders of how you organize your directories</li>
+            <li><b>Constructor:</b> used to initialize the object’s state. Constructors will assign values to the data of a class when the object is created.
+                Constructors can contain instructions that are executed when the object is created. </li>
+            <li><b>Fixture:</b> helps you arrange data and is especially useful for AAA testing
+                because it helps with the “arrange” element. The order in which you add the fixtures matter so if you want something to do </li>
+            <li><b>Type Hint:</b> statically indicates the type of value in Python code</li>
+                <ul>
+                    <li>Without type hints: def headline(text, align = True): </li>
+                    <li>With type hints: def headline(text:str, align:bool = True): </li>
+                </ul>
+            <li><b>Type Cast:</b>This is also called explicit type conversion and this is the process of converting the values of one data type into another.
+                The predefined functions int(), float(), and string() are the data types that can be changed from one to another. It is important to note
+                that a loss of data is possible when the object is converted to a different data type</li>
+            <li><b>Unit Test:</b>checking individual components for errors. A unit is the smallest part of software that can be tested. The main idea with unit
+                testing is to make sure that each individual part of the code does that job it is intended to do. Unit testing requires you to create the test cases,
+                review/rework based on the results, baseline, and execute the test cases. The test cases should be independent so changes can be made without affecting
+                the rest of the software. Unit testing helps to improve the quality of code, find bugs, and allows for change.</li>
+            <li><b>Static:</b> variable's lifetime is the entire run time of the program </li>
+            <li><b>Instance Method:</b>method that belongs to instances of a class, not to the class itself. This requires an object of its class to be created
+                before it is called. Instance methods are stored in a single memory location, not on a per-instance basis.</li>
+            <li><b>Instance Property:</b> properties that are defined inside any class and require an instance that is created with the help of the class name itself.</li>
+            <li><b>Static Method:</b>methods that can be called without creating the object of a class. Static methods are used when you have code that needs to be
+                shared by all instances of the same class. Static methods do not have to be instantiated because they are global.</li>
+            <li><b>Static Property:</b>Allows you to have one copy of the variable in the program and other parts of the program have access to it, so it is global</li>
+            <li><b>Encapsulation:</b>where data is stored in an object; hide specific information and control access to the internal state of the object</li>
+            <li><b>Inheritance:</b>the ability of one class to derive properties from another class. The child class can inherit properties from the parent/base class.
+                This provides reusability and limits repetition.</li>
+                <ul>
+                    <li>class A(object)</li>
+                    <li>class B(A)</li>
+                    <li>This means that class B will inherit the properties of the parent class A. </li>
+                </ul>
+            <li><b>Polymorphism:</b>“Many forms”. A method acts differently depending on the type of object that calls it.</li>
+            <li><b>Abstraction:</b> The process of defining classes by only including necessary variables/attributes</li>
+                <ul>
+                    <li>
+                        One function calls a method, which calls another method and so on. Each process in the chain does one action and has a singular responsibility.
+                    </li>
+                </ul>
+            <li><b>Overview of SOLID:</b>SOLID describes the main ideas of Object Oriented Programming; create high-quality maintainable code, minimizes dependencies between classes.
+                Benefits of SOLID principles are easily recognizable on larger applications</li>
+                <ol>
+                    <li><b>Single Responsibility:</b> single file = single class; class and function should only perform one task and functions should be testable.</li>
+                    <li><b>Open-Close Principle:</b> class must be open to extension and closed to modification. New class functionality
+                        is added to an existing class through INHERITANCE, not by modifying the existing one.</li>
+                    <li><b>Liskov Substitution Principle:</b> explains how to properly override the parent class methods without affecting the subclasses.
+                        Replacing the parent class object with a subclass object cannot break any tests/functionality.</li>
+                    <li><b>Interface Segregation Principle:</b> Cannot overload a class and force it to implement or execute functionality that it does not need. This
+                        ties along with the single-responsibility principle.</li>
+                    <li><b>Dependency Inversion Principle:</b>Classes should depend on abstractions, not on the specific implementations of those abstractions. The purpose of  this principle
+                        </li>
+                </ol>
+            <li><b>Overview of Design Patterns: Elements of Reusable Object-Oriented Software:</b></li>
+                <br>
+                <img src="https://d585tldpucybw.cloudfront.net/sfimages/default-source/default-album/design-patterns-image-1.png?sfvrsn=95bdd682_0" alt="3 categories" class="center" style="width:650px;height:550px;">
+                <ul>
+                    <li>Written by Erich Gamma, Richard Helm, Ralph Johnson, and John Vlisside (aka "The Gang of Four") and published in 1994</li>
+                    <li>The book describes the capabilities and limitations of object-oriented programming. The authors explain the 23 classic software design patterns.</li>
+                    <li>3 Pattern Types</li>
+                        <ul>
+                            <li><b>Creational Patterns:</b> create objects rather than having to instantiate objects directly </li>
+                            <li><b>Structural Patterns:</b> deals with class structure like inheritance and object composition</li>
+                            <li><b>Behavioral Patterns:</b> communication between objects</li>
+                        </ul>
+                </ul>
+
+        </ul>
+{% endblock %}

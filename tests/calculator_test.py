@@ -1,35 +1,43 @@
 """Testing the Calculator"""
+# From specifies the namespace
+
+from calculator.operations import Addition as Add, Subtraction as Sub, Multiplication as Multiply, Division as Divide
 from calculator import Calculator
 
 
-def test_calculator_is_instance():
-    """Testing the Calculator"""
-    calculator = Calculator()
-    assert isinstance(calculator, Calculator)
+class Calculation:
+    def __init__(self, tuple_list: tuple):
+        self.values = Calculation.convert_args_to_tuple_of_float(tuple_list)
+
+    @classmethod
+    def create(cls, tuple_list, tuple):
+        return (cls, tuple_list)
 
 
-def test_calculator_get_result_method():
-    """Testing the Calculator"""
-    calculator = Calculator()
-    assert calculator.get_result() == 0
-
-
-def test_calculator_result_property():
-    """Testing the Calculator"""
-    calc1 = Calculator()
-    calc2 = Calculator()
-    calc1.result = 5
-    calc2.result = 6
-    assert calc1.result == 5
-    assert calc2.result == 6
+def tuple_list():
+    """Arranging data"""
+    return 1.0, 2
 
 
 def test_calculator_add_method():
     """Testing the Calculator"""
-    calculator = Calculator()
-    assert calculator.add(1) == 1
+    # this is show using the calculator object add method
+    assert Calculator.add(tuple_list()) == 3
+
 
 def test_calculator_subtract_method():
     """Testing the Calculator Subtract"""
-    calculator = Calculator()
-    assert calculator.subtract(1) == -1
+    assert Calculator.subtract(tuple_list()) == -3
+
+
+def test_calculator_multiply_method():
+    """Testing the Calculator Multiplication"""
+    assert Calculator.multiply(tuple_list()) == 2
+
+
+def test_calculator_divide_method():
+    """Testing the Calculator Division"""
+    assert Calculator.divide(tuple_list()) == 0.5
+
+# @staticmethod
+# def add(tuple_list):
